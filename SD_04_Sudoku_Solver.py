@@ -22,3 +22,30 @@ def find_empty_location(board):
             if board[i][j] == 0:
                 return i, j
     return -1, -1
+
+def solve_sudoku(board):
+    row, col = find_empty_location(board)
+
+    if row == -1 and col == -1:
+        return True  # Puzzle solved
+
+    for num in range(1, 10):
+        if is_valid(board, row, col, num):
+            board[row][col] = num
+
+            if solve_sudoku(board):
+                return True  # If the puzzle is solved, return True
+
+            board[row][col] = 0  # If not, backtrack
+
+    return False
+
+def print_board(board):
+    for i in range(9):
+        for j in range(9):
+            print(board[i][j], end=" ")
+            if (j + 1) % 3 == 0 and j < 8:
+                print("|", end=" ")
+        print()
+        if (i + 1) % 3 == 0 and i < 8:
+            print("-" * 21)
