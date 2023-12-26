@@ -42,7 +42,6 @@ def solve_sudoku(board):
 
     return False
 
-
 def print_board(board):
     for i in range(9):
         for j in range(9):
