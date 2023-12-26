@@ -1,8 +1,10 @@
 def is_valid(board, row, col, num):
+    
     # Check if the current row does not contain the same number
     if num in board[row]:
         return False
 
+    
     # Check if the current column does not contain the same number
     for i in range(9):
         if board[i][col] == num:
