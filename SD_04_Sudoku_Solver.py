@@ -64,3 +64,9 @@ unsolved_board = [
     [0, 0, 0, 4, 1, 9, 0, 0, 5],
     [0, 0, 0, 0, 8, 0, 0, 7, 9]
 ]
+if solve_sudoku(unsolved_board):
+    print("Sudoku Solved:")
+    print_board(unsolved_board)
+else:
+    print("No solution exists.")
+
