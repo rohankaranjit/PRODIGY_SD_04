@@ -16,7 +16,6 @@ def is_valid(board, row, col, num):
         for j in range(start_col, start_col + 3):
             if board[i][j] == num:
                 return False
-
     
     return True
 def find_empty_location(board):
