@@ -6,7 +6,6 @@ def is_valid(board, row, col, num):
     for i in range(9):
         if board[i][col] == num:
             return False
-
     # Check if the current 3x3 subgrid does not contain the same number
     start_row, start_col = 3 * (row // 3), 3 * (col // 3)
     for i in range(start_row, start_row + 3):
