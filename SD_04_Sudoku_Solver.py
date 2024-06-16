@@ -19,7 +19,6 @@ def find_empty_location(board):
             if board[i][j] == 0:
                 return i, j
     return -1, -1
-
 def solve_sudoku(board):
     row, col = find_empty_location(board)
 
