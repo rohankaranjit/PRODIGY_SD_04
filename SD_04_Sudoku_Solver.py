@@ -23,7 +23,6 @@ def solve_sudoku(board):
     row, col = find_empty_location(board)
     if row == -1 and col == -1:
         return True  # Puzzle solved
-
     for num in range(1, 10):
         if is_valid(board, row, col, num):
             board[row][col] = num
