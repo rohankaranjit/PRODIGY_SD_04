@@ -29,7 +29,6 @@ def solve_sudoku(board):
 
             if solve_sudoku(board):
                 return True  # If the puzzle is solved, return True
-
             board[row][col] = 0  # If not, backtrack
 
     return False
