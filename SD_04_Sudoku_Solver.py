@@ -21,7 +21,6 @@ def find_empty_location(board):
     return -1, -1
 def solve_sudoku(board):
     row, col = find_empty_location(board)
-
     if row == -1 and col == -1:
         return True  # Puzzle solved
 
