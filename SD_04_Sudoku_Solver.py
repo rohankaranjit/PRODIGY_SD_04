@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 def is_valid(board, row, col, num):
    # Check if the current row does not contain the same number
     if num in board[row]:
